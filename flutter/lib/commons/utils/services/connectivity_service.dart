@@ -11,7 +11,8 @@ class ConnectivityService {
       var connectivityResult = await _connectivity.checkConnectivity();
       return connectivityResult.any((result) {
         return result == ConnectivityResult.mobile ||
-            result == ConnectivityResult.wifi;
+            result == ConnectivityResult.wifi ||
+            result == ConnectivityResult.ethernet;
       });
     } catch (e) {
       return false;
@@ -25,6 +26,7 @@ class ConnectivityService {
   bool isOfflineFromResults(List<ConnectivityResult> results) {
     return !results.any((result) =>
         result == ConnectivityResult.mobile ||
-        result == ConnectivityResult.wifi);
+        result == ConnectivityResult.wifi ||
+        result == ConnectivityResult.ethernet);
   }
 }

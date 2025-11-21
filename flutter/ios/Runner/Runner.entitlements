@@ -4,11 +4,5 @@
 <dict>
 	<key>aps-environment</key>
 	<string>development</string>
-	<key>com.apple.developer.usernotifications.push-type</key>
-	<array>
-		<string>alert</string>
-		<string>badge</string>
-		<string>sound</string>
-	</array>
 </dict>
 </plist>
